@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FIFA World Cup 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:800;
+background:linear-gradient(90deg,#00e5ff,#00ff88);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00ff88;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('https://images.unsplash.com/photo-1575361204480-aadea25e6e68?auto=format&fit=crop&w=1500&q=80');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content h1{
+font-size:70px;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.hero-content span{
+color:#00ff88;
+}
+
+.hero-content p{
+font-size:22px;
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:linear-gradient(135deg,#00e5ff,#00ff88);
+color:black;
+font-weight:700;
+text-decoration:none;
+border-radius:50px;
+transition:.4s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:45px;
+margin-bottom:50px;
+}
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.time-box{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+padding:30px;
+width:150px;
+border-radius:20px;
+text-align:center;
+}
+
+.time-box h2{
+font-size:40px;
+color:#00ff88;
+}
+
+.hosts{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+padding:30px;
+border-radius:20px;
+transition:.4s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:28px;
+color:#00ff88;
+}
+
+.teams{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.team-card{
+background:#101827;
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:.4s;
+}
+
+.team-card:hover{
+transform:scale(1.05);
+}
+
+.team-card img{
+width:80px;
+margin-bottom:15px;
+}
+
+.matches{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.match{
+background:#101827;
+padding:25px;
+border-radius:20px;
+}
+
+.match h3{
+color:#00ff88;
+margin-bottom:10px;
+}
+
+footer{
+background:#020617;
+text-align:center;
+padding:40px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:42px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+gap:15px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">WORLD CUP 2026</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#countdown">Countdown</a></li>
+<li><a href="#hosts">Hosts</a></li>
+<li><a href="#teams">Teams</a></li>
+<li><a href="#matches">Matches</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>FIFA <span>WORLD CUP</span> 2026</h1>
+
+<p>
+The biggest football tournament on Earth returns with
+48 teams, 3 host nations, and unforgettable moments.
+</p>
+
+<a href="#countdown" class="btn">
+Explore Tournament
+</a>
+
+</div>
+
+</section>
+
+<section id="countdown">
+
+<h2 class="section-title">Countdown To Kickoff</h2>
+
+<div class="countdown">
+
+<div class="time-box">
+<h2 id="days">00</h2>
+<p>Days</p>
+</div>
+
+<div class="time-box">
+<h2 id="hours">00</h2>
+<p>Hours</p>
+</div>
+
+<div class="time-box">
+<h2 id="minutes">00</h2>
+<p>Minutes</p>
+</div>
+
+<div class="time-box">
+<h2 id="seconds">00</h2>
+<p>Seconds</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="hosts">
+
+<h2 class="section-title">Host Nations</h2>
+
+<div class="hosts">
+
+<div class="card">
+<h3>🇺🇸 USA</h3>
+<p>Major stadiums and the final venue.</p>
+</div>
+
+<div class="card">
+<h3>🇨🇦 Canada</h3>
+<p>World-class football experience.</p>
+</div>
+
+<div class="card">
+<h3>🇲🇽 Mexico</h3>
+<p>Historic football culture and passion.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="teams">
+
+<h2 class="section-title">Fan Favorites</h2>
+
+<div class="teams">
+
+<div class="team-card">
+<h2>🇦🇷 Argentina</h2>
+<p>Defending Champions</p>
+</div>
+
+<div class="team-card">
+<h2>🇧🇷 Brazil</h2>
+<p>Five-Time Champions</p>
+</div>
+
+<div class="team-card">
+<h2>🏴 England</h2>
+<p>European Giants</p>
+</div>
+
+<div class="team-card">
+<h2>🇫🇷 France</h2>
+<p>World-Class Talent</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="matches">
+
+<h2 class="section-title">Featured Matches</h2>
+
+<div class="matches">
+
+<div class="match">
+<h3>Argentina vs Brazil</h3>
+<p>Classic South American Rivalry</p>
+</div>
+
+<div class="match">
+<h3>England vs France</h3>
+<p>European Powerhouse Clash</p>
+</div>
+
+<div class="match">
+<h3>USA vs Mexico</h3>
+<p>Host Nation Derby</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>⚽ FIFA WORLD CUP 2026 ⚽</h2>
+
+<p>
+Built by Rishi Dev
+</p>
+
+</footer>
+
+<script>
+
+const countDownDate =
+new Date("July 19, 2026 19:00:00").getTime();
+
+setInterval(function(){
+
+const now = new Date().getTime();
+
+const distance = countDownDate - now;
+
+const days =
+Math.floor(distance/(1000*60*60*24));
+
+const hours =
+Math.floor((distance%(1000*60*60*24))
+/(1000*60*60));
+
+const minutes =
+Math.floor((distance%(1000*60*60))
+/(1000*60));
+
+const seconds =
+Math.floor((distance%(1000*60))
+/1000);
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+
+},1000);
+
+</script>
+
+</body>
+</html>
